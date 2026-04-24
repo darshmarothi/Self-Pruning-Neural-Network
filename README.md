@@ -1,13 +1,13 @@
 # Self-Pruning Neural Network
 
-## 📖 Overview
+## Overview
 This project implements a neural network that learns to prune itself during training using learnable gating parameters.
 
 Each weight is associated with a sigmoid gate that determines its importance. A sparsity regularization term encourages unnecessary connections to be removed.
 
 ---
 
-## ⚙️ Methodology
+## Methodology
 
 ### Prunable Layer
 - Each weight has a learnable gate
@@ -23,7 +23,7 @@ Sparsity loss:
 
 ---
 
-## 📊 Results
+## Results
 
 | Lambda | Accuracy | Sparsity (%) |
 |--------|---------|--------------|
@@ -33,20 +33,25 @@ Sparsity loss:
 
 ---
 
-## 📈 Gate Distribution
+##  Gate Distribution
+<img width="1564" height="1232" alt="image" src="https://github.com/user-attachments/assets/85adfc59-9c4a-437b-ad53-d818263dbc59" />
 
-![Gate Distribution](<img width="1564" height="1232" alt="image" src="https://github.com/user-attachments/assets/2fd3cd97-54bb-4dc6-970e-1ae619863c57" />
-)
 
 ---
 
-## 🧠 Key Insight
+## Key Insight
 
 Due to the continuous nature of sigmoid gating, weights are attenuated rather than forced to exact zero. Therefore, a threshold of 0.5 is used to determine effective pruning.
 
 ---
 
-## 🛠️ How to Run
+## Dataset
+
+CIFAR-10 dataset from torchvision.
+
+---
+
+## How to Run
 
 ```bash
 pip install torch torchvision matplotlib
